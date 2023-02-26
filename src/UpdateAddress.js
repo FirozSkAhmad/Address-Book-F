@@ -19,7 +19,7 @@ function UpdateAddress() {
         const userId = localStorage.getItem("userId")
         const body = { userId, name, email, phone, address }
         let options = {
-            url: `http://localhost:4000/updateAddress/${addressId}`,
+            url: `https://address-book-ogo9.onrender.com/updateAddress/${addressId}`,
             method: "PUT",
             headers: {
                 authorization: localStorage.getItem('token'),
@@ -37,7 +37,7 @@ function UpdateAddress() {
     const [data, setData] = useState([])
     const getData = async function register() {
         let options = {
-            url: `http://localhost:4000/getAddress/${Id}`,
+            url: `https://address-book-ogo9.onrender.com/getAddress/${Id}`,
             method: "get",
             headers: {
                 authorization: localStorage.getItem('token'),

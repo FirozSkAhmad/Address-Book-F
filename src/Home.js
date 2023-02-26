@@ -32,7 +32,7 @@ function Home() {
         const userId = localStorage.getItem("userId")
         const body = { userId }
         let options = {
-            url: `http://localhost:4000/deleteAddress/${id}`,
+            url: `https://address-book-ogo9.onrender.com/deleteAddress/${id}`,
             method: "DELETE",
             headers: {
                 authorization: localStorage.getItem('token'),
@@ -59,7 +59,7 @@ function Home() {
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Address</th>
-                            <th colspan="2">Operations</th>
+                            <th colSpan="2">Operations</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,8 +71,8 @@ function Home() {
                                     <td>{item.email}</td>
                                     <td>{item.phone}</td>
                                     <td>{item.address}</td>
-                                    <td><button className='btn btn-primary' onClick={() => update(item._id)}>Update</button></td>
-                                    <td><button className='btn btn-primary' onClick={() => deleteAddress(item._id)}>Delete</button></td>
+                                    <td><button className='btn btn-success' onClick={() => update(item._id)}>Update</button></td>
+                                    <td><button className='btn btn-danger' onClick={() => deleteAddress(item._id)}>Delete</button></td>
                                 </tr>
                             })
                         }

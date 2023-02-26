@@ -14,7 +14,7 @@ function Register() {
         console.log(name, email, password)
         const body = { name, email, password }
         let options = {
-            url: "http://localhost:4000/createUser",
+            url: "https://address-book-ogo9.onrender.com/createUser",
             method: "POST",
             data: body,
         }
