@@ -9,7 +9,7 @@ function Home() {
     const [data, setData] = useState([])
     const getData = async function register() {
         let options = {
-            url: "http://localhost:4000/getAddress",
+            url: "https://address-book-ogo9.onrender.com/getAddress",
             method: "get",
             headers: {
                 authorization: localStorage.getItem('token'),
