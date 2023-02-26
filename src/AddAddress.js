@@ -17,7 +17,7 @@ function AddAddress() {
         const userId = localStorage.getItem("userId")
         const body = { userId, name, email, phone, address }
         let options = {
-            url: "http://localhost:4000/createAddress",
+            url: "https://address-book-ogo9.onrender.com/createAddress",
             method: "POST",
             headers: {
                 authorization: localStorage.getItem('token'),
